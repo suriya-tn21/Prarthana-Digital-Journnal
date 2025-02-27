@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Farewell Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Supabase JS library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Digital Farewell Journal</h1>
+            <p class="subtitle">Share your personal message before we say goodbye</p>
+        </header>
+
+        <div id="loginSection" style="display: none;">
+            <div class="card login-form">
+                <div class="login-header">
+                    <h2>Access Journal</h2>
+                </div>
+                <div class="form-group">
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" placeholder="Enter the journal password">
+                </div>
+                <button id="loginButton">Sign In</button>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <a href="#" id="leaveMessageLink">Leave a message instead?</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="journalSection" style="display: none;">
+            <div class="journal-header">
+                <h2>All Messages</h2>
+                <div class="journal-actions">
+                    <button id="exportButton">Export Messages</button>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+
+            <div id="messagesContent" class="content active">
+                <div id="messagesList">
+                    <div class="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <h3>No messages yet</h3>
+                        <p>When people leave you messages, they'll appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="messageFormSection">
+            <div class="card">
+                <h2>Leave a Farewell Message</h2>
+                <p>Your message will be private and only visible to the Prarthana.</p>
+                
+                <div id="submitMessage" class="message"></div>
+                
+                <div class="form-group">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="messageContent">Your Message</label>
+                    <textarea id="messageContent" placeholder="Write your farewell message here..." required></textarea>
+                </div>
+                
+                <button id="submitButton">Submit Message</button>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <a href="#" id="ownerAccessLink">Prarthana? Sign in here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Suriya Narayanan T N Corp &copy; 2025
+    </footer>
+</body>
+</html>
